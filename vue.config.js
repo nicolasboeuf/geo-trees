@@ -21,7 +21,7 @@ module.exports = {
   },
   filenameHashing: false,
   productionSourceMap: false,
-  publicPath: process.env.NODE_ENV === "production" ? "/geo-trees/" : "/",
+  publicPath: "/geo-trees",
   chainWebpack:
     config => {
       config.optimization.delete('splitChunks')
