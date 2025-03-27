@@ -22,11 +22,7 @@ export default {
     meta: [
       {
         name: 'description',
-        content: 'Boilerplate site multipages avec vue'
-      },
-      {
-        name: 'keywords',
-        content: 'Boilerplate'
+        content: 'GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping'
       },
       {
         name: 'robots',
@@ -40,7 +36,7 @@ export default {
     link: [
       {
         rel:'icon',
-        href:''
+        href:'favicon.ico'
       }
     ]
   },

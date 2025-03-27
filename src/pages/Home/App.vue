@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <h1>Homepage</h1>
+    <h1>GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping.</h1>
+    <img src="@/assets/icon.png" alt="GEO-TREES" />
   </div>
 </template>
 
@@ -18,15 +19,11 @@ Vue.use(VueMeta)
 export default {
   name: 'App',
   metaInfo: {
-    title: 'Mon site - Accueil',
+    title: 'Forest Biomass Reference System - GEO-TREES - Homepage',
     meta: [
       {
         name: 'description',
-        content: 'Boilerplate site multipages avec vue'
-      },
-      {
-        name: 'keywords',
-        content: 'Boilerplate'
+        content: 'GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping'
       },
       {
         name: 'robots',
@@ -40,7 +37,7 @@ export default {
     link: [
       {
         rel:'icon',
-        href:''
+        href:'icon.png'
       }
     ]
   },
