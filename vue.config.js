@@ -1,0 +1,29 @@
+const webpack = require('webpack')
+module.exports = {
+  pages: {
+    'index':{
+      entry: './src/pages/Home/main.js',
+      title: 'home',
+      filename: 'index.html'
+    },
+    'secondpage':{
+      entry: './src/pages/secondpage/main.js',
+      title: 'secondpage',
+      filename: 'secondpage.html'
+    }
+  },
+  configureWebpack: {
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1
+      })
+    ]
+  },
+  filenameHashing: false,
+  productionSourceMap: false,
+  publicPath: '',
+  chainWebpack:
+    config => {
+      config.optimization.delete('splitChunks')
+    }
+}
