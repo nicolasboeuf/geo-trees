@@ -2,45 +2,17 @@
   <div id="app">
     <Header></Header>
     <h1>GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping.</h1>
-    <img src="@/assets/icon.png" alt="GEO-TREES" />
+    <img src="icon.png" alt="GEO-TREES" />
   </div>
 </template>
 
 <script>
 
 import Header from '@/components/header.vue'
-
-import Vue from 'vue'
-import VueMeta from 'vue-meta'
-
-Vue.use(VueMeta)
 /* import store from '@/store' */
 
 export default {
-  name: 'App',
-  metaInfo: {
-    title: 'Forest Biomass Reference System - GEO-TREES - Homepage',
-    meta: [
-      {
-        name: 'description',
-        content: 'GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping'
-      },
-      {
-        name: 'robots',
-        content: 'index, follow'
-      },
-      {
-        name: 'language',
-        content: 'French'
-      },
-    ],
-    link: [
-      {
-        rel:'icon',
-        href:'icon.png'
-      }
-    ]
-  },
+  name: 'Homepage',
   components: {
     Header
   },

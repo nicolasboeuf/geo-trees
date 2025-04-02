@@ -1,7 +1,9 @@
 <template>
   <div id="header">
-    <a href="/">Home</a>
-    <a href="/secondpage.html">seconde page</a>
+    <a :href="currentPath + '/'">Home</a>
+    <a :href="currentPath + '/secondpage.html'">seconde page</a>
+
+    {{ currentPath }}
   </div>
 </template>
 
@@ -17,6 +19,9 @@ export default {
   props: {
   },
   computed: {
+    currentPath(){
+      return window.location.origin
+    }
   },
   methods: {
   },
@@ -25,7 +30,7 @@ export default {
   },
 
   created(){
-    
+    console.log(window.location)
   }
 
 }
