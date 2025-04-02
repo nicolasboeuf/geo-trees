@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     currentPath(){
-      return window.location.origin
+      return window.location.href.substring(0, window.location.href.lastIndexOf('/'))
     }
   },
   methods: {
@@ -31,6 +31,7 @@ export default {
 
   created(){
     console.log(window.location)
+    console.log(window.location.href.substring(0, window.location.href.lastIndexOf('/')))
   }
 
 }
