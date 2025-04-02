@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <h1>Seconde page</h1>
-    <span>coucou</span>
+    <div id="content">
+      <h1>Seconde page</h1>
+    </div>
   </div>
 </template>
 

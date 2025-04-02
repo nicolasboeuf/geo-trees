@@ -1,8 +1,23 @@
 <template>
   <div id="app">
     <Header></Header>
-    <h1>GEO-TREES: high-accuracy ground data for satellite-derived biomass mapping.</h1>
-    <img src="icon.png" alt="GEO-TREES" />
+    <div id="content">
+      <div id="content-wrapper">
+        <h1>GEO-TREES: high-accuracy ground data</h1>
+        <h2>for satellite-derived biomass mapping</h2>
+        <div class="homepage-intro">
+          <span>
+            Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest carbon from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data open access.
+          </span>
+        </div>
+        <div class="homepage-intro">
+          <span>The Terms of Reference of the GEO-TREES initiative are available <a href="https://geo-trees.org/terms-of-reference/" target="_blank">here</a>.</span>
+        </div>
+        <div class="homepage-intro">
+          <span>GEO-TREES implements the recommendations of the <a href="https://lpvs.gsfc.nasa.gov/AGB/AGB_home.html" target="_blank">CEOS Aboveground Biomass Land Product Validation protocol</a>.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,16 +46,75 @@ export default {
 <style lang="scss">
 
 @import "../../../css/overload-fonts.css";
+@import "../../../css/commons.scss";
 
 #app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  #content{
+    background-image: url("../../assets/homepage-background.jpg");
+    background-size: cover;
+    background-position: center;
+    #content-wrapper{
+      h1{
+        color: #fff;
+        background-color: #213043;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 5px;
+        margin-top: 55px;
+      } 
+      h2{
+        color: #fff;
+        background-color: #213043;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 40px;
+      }
+      .homepage-intro{
+        display: inline-block;
+        margin-top: 10px;
+        text-align: left;
+        span{
+          display: block;
+          text-align: left;
+          background-color: #ffffff;
+          font-size: 20px;
+          color: #213043;
+          font-family: "Lato-Regular";
+          padding: 10px 20px;
+          line-height: 45px;
+          text-align: left;
+          a{
+            color: #53A034;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 767px) {
+
+  #app {
+    #content{
+      #content-wrapper{
+        h1{
+          text-align: left;
+        } 
+        h2{
+          text-align: left;
+        }
+        .homepage-intro{
+          font-size: 18px;
+          span{
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 </style>
-
-<!-- 
-
-<meta property="og:title" content="Mon site - Accueil"><meta property="og:image" content=""><meta property="og:description" content="Boilerplate site multipages avec vue"><title>Mon site - Accueil</title>
-
--->

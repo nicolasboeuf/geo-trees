@@ -1,12 +1,78 @@
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  #content{
+    width: 100%;
+    background-color:green;
+    height: auto;
+    min-height: calc(100vh - 166px);
+    padding-bottom: 100px;
+    text-align: center;
+    #content-wrapper{
+      width: 90%;
+      max-width: 1130px;
+      margin: 0 auto;
+      h1{
+        font-family: "Lato-Bold";
+        font-size: 56px;
+        text-align: center;
+      }
+      h2{
+        font-family: "Lato-Bold";
+        font-size: 46px;
+        text-align: center;
+      }
+    }
+  }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1140px) {
+
+  #app {
+    #content{
+      #content-wrapper{
+        h1{
+          font-size: 50px;
+        }
+        h2{
+          font-size: 45px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  #app {
+    #content{
+      #content-wrapper{
+        h1{
+          font-size: 35px;
+        }
+        h2{
+          font-size: 30px;
+        }
+      }
+    }
+  }
 
 }
 
 @media (max-width: 767px) {
+
+  #app {
+    #content{
+      #content-wrapper{
+        h1{
+          font-size: 30px;
+        }
+        h2{
+          font-size: 25px;
+        }
+      }
+    }
+  }
 
 }
