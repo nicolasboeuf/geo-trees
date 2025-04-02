@@ -1,9 +1,7 @@
 <template>
   <div id="header">
-    <a :href="currentPath + '/'">Home</a>
-    <a :href="currentPath + '/secondpage.html'">seconde page</a>
-
-    {{ currentPath }}
+    <a :href="dynamicPath + '/'">Home</a>
+    <a :href="dynamicPath + '/secondpage.html'">seconde page</a>
   </div>
 </template>
 
@@ -19,7 +17,7 @@ export default {
   props: {
   },
   computed: {
-    currentPath(){
+    dynamicPath(){
       return window.location.href.substring(0, window.location.href.lastIndexOf('/'))
     }
   },
@@ -30,8 +28,6 @@ export default {
   },
 
   created(){
-    console.log(window.location)
-    console.log(window.location.href.substring(0, window.location.href.lastIndexOf('/')))
   }
 
 }
