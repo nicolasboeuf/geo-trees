@@ -8,7 +8,7 @@
     </div>
     <div id="header-links" :class="{'open': menuOpen}">
       <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
-      <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/about_us.html'">ABOUT US</a>
+      <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/about-us.html'">ABOUT US</a>
       <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
       <a :class="pathName === 'data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">DATA</a>
       <a :class="pathName === 'contact.html' ? 'active' : ''" :href="dynamicPath + '/contact.html'">CONTACT</a>
@@ -58,7 +58,7 @@ export default {
 
 #header{
   background-color: #fff;
-  height: 66px;
+  height: 80px;
   position: relative;
   #header-logo{
     width: auto;
@@ -66,7 +66,7 @@ export default {
     position: absolute;
     bottom: 0;
     left: 20px;
-    height: 60px;
+    height: 75px;
     img{
       width: auto;
       height: 100%;
@@ -132,7 +132,7 @@ export default {
   #header{
     #header-logo{
       left: 10px;
-      height: 50px;
+      height: 75px;
     }
     #header-links{
       a{
@@ -153,7 +153,7 @@ export default {
     #header-logo{
       left: 50%;
       transform: translateX(-50%);
-      height: 60px;
+      height: 70px;
     }
     #header-links{
       display: flex;
@@ -165,7 +165,7 @@ export default {
       overflow: hidden;
       background-color: #fff;
       position: absolute;
-      top: 66px;
+      top: 80px;
       right: 0;
       z-index: 100;
       padding: 0;

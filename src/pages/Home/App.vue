@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <div id="content">
-      <div id="content-wrapper">
+      <div class="content-wrapper">
         <h1>GEO-TREES: high-accuracy ground data</h1>
         <h2>for satellite-derived biomass mapping</h2>
         <div class="homepage-intro">
@@ -53,14 +53,13 @@ export default {
     background-image: url("../../assets/homepage-background.jpg");
     background-size: cover;
     background-position: center;
-    #content-wrapper{
+    .content-wrapper{
       h1{
         color: #fff;
         background-color: #213043;
         display: inline-block;
         padding: 10px 20px;
         margin-bottom: 5px;
-        margin-top: 55px;
       } 
       h2{
         color: #fff;
@@ -73,8 +72,9 @@ export default {
         display: inline-block;
         margin-top: 10px;
         text-align: left;
+        width: 100%;
         span{
-          display: block;
+          display: inline-block;
           text-align: left;
           background-color: #ffffff;
           font-size: 20px;
@@ -82,7 +82,6 @@ export default {
           font-family: "Lato-Regular";
           padding: 10px 20px;
           line-height: 45px;
-          text-align: left;
           a{
             color: #53A034;
             text-decoration: none;
@@ -98,7 +97,7 @@ export default {
 
   #app {
     #content{
-      #content-wrapper{
+      .content-wrapper{
         .homepage-intro{
           font-size: 18px;
           span{
