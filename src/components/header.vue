@@ -2,12 +2,12 @@
   <div id="header">
     <div id="header-logo"><img src="icon.png" alt="GEO-TREES"/></div>
     <div id="header-links">
-      <a :class="pathName === '/' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
-      <a :class="pathName === '/about_us.html' ? 'active' : ''" :href="dynamicPath + '/about_us.html'">ABOUT US</a>
-      <a :class="pathName === '/project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
-      <a :class="pathName === '/data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">DATA</a>
-      <a :class="pathName === '/contact.html' ? 'active' : ''" :href="dynamicPath + '/contact.html'">CONTACT</a>
-      <a :class="pathName === '/terms-of-reference.html' ? 'active' : ''" :href="dynamicPath + '/terms-of-reference.html'">Terms of Reference</a>
+      <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
+      <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/about_us.html'">ABOUT US</a>
+      <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
+      <a :class="pathName === 'data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">DATA</a>
+      <a :class="pathName === 'contact.html' ? 'active' : ''" :href="dynamicPath + '/contact.html'">CONTACT</a>
+      <a :class="pathName === 'terms-of-reference.html' ? 'active' : ''" :href="dynamicPath + '/terms-of-reference.html'">Terms of Reference</a>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
       return window.location.href.substring(0, window.location.href.lastIndexOf('/'))
     },
     pathName(){
-      return window.location.pathname
+      return window.location.href.split('/').pop()
     }
   },
   methods: {
@@ -38,7 +38,8 @@ export default {
   },
 
   created(){
-    
+    console.log(this.pathName)
+    console.log(this.dynamicPath)
   }
 
 }
