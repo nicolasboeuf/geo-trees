@@ -1,7 +1,12 @@
 <template>
   <div id="header">
     <div id="header-logo"><img src="icon.png" alt="GEO-TREES"/></div>
-    <div id="header-links">
+    <div id="header-menu-button" :class="{'open': menuOpen}" @click="toggleMenu">
+      <div class="menu-button-line"></div>
+      <div class="menu-button-line"></div>
+      <div class="menu-button-line"></div>
+    </div>
+    <div id="header-links" :class="{'open': menuOpen}">
       <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
       <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/about_us.html'">ABOUT US</a>
       <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
@@ -19,6 +24,7 @@ export default {
   name: 'Header',
   data(){
     return {
+      menuOpen: false
     }
   },
   props: {
@@ -32,14 +38,16 @@ export default {
     }
   },
   methods: {
+    toggleMenu(){
+      this.menuOpen = !this.menuOpen
+    }
   },
 
   watch:{
   },
 
   created(){
-    console.log(this.pathName)
-    console.log(this.dynamicPath)
+
   }
 
 }
@@ -53,7 +61,7 @@ export default {
   height: 66px;
   position: relative;
   #header-logo{
-    width: 100px;
+    width: auto;
     height: 100%;
     position: absolute;
     bottom: 0;
@@ -110,6 +118,111 @@ export default {
       &.active{
         &:before{
           opacity: 1;
+        }
+      }
+    }
+  }
+  #header-menu-button{
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  #header{
+    #header-logo{
+      left: 10px;
+      height: 50px;
+    }
+    #header-links{
+      a{
+        margin: 0 10px;
+        font-size: 17px;
+        &:after{
+          height: 17px;
+          right: -12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #header{
+    #header-logo{
+      left: 50%;
+      transform: translateX(-50%);
+      height: 60px;
+    }
+    #header-links{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      background-color: #fff;
+      position: absolute;
+      top: 66px;
+      right: 0;
+      z-index: 100;
+      padding: 0;
+      transition: height 0.3s ease-in-out;
+      &.open{
+        height: 250px;
+      }
+      a{
+        margin: 10px 0px;
+        &:after{
+          display: none;
+        }
+        &:last-child{
+          &:after{
+            display: none;
+          }
+        }
+        &:hover{
+          &:before{
+            opacity: 0;
+          }
+        }
+      }
+    }
+    #header-menu-button{
+      display: block;
+      width: 30px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      z-index: 100;
+      cursor: pointer;
+      background-color: #fff;
+      .menu-button-line{
+        width: 100%;
+        height: 2px;
+        background-color: #213043;
+        &:nth-child(2){
+          margin: 5px 0;
+        }
+        &:nth-child(3){
+          margin-top: 5px;
+        }
+      }
+      &.open{
+        .menu-button-line{
+          &:nth-child(1){
+            transform: rotate(45deg) translate(5px, 5px);
+          }
+          &:nth-child(2){
+            opacity: 0;
+          }
+          &:nth-child(3){
+            transform: rotate(-45deg) translate(5px, -5px);
+          }
         }
       }
     }
