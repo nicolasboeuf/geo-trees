@@ -6,10 +6,10 @@ module.exports = {
       title: 'home',
       filename: 'index.html'
     },
-    'secondpage':{
-      entry: './src/pages/secondpage/main.js',
-      title: 'secondpage',
-      filename: 'secondpage.html'
+    'about_us':{
+      entry: './src/pages/about_us/main.js',
+      title: 'about_us',
+      filename: 'about_us.html'
     }
   },
   configureWebpack: {

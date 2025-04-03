@@ -2,7 +2,7 @@
   <div id="app">
     <Header></Header>
     <div id="content">
-      <h1>Seconde page</h1>
+      <h1>About us</h1>
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import Header from '@/components/header.vue'
 
 export default {
-  name: 'Secondepage',
+  name: 'About_us',
   components: {
     Header
   },
