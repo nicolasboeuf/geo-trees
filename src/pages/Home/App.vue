@@ -99,12 +99,6 @@ export default {
   #app {
     #content{
       #content-wrapper{
-        h1{
-          text-align: left;
-        } 
-        h2{
-          text-align: left;
-        }
         .homepage-intro{
           font-size: 18px;
           span{
