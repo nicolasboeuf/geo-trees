@@ -2,19 +2,21 @@
   <div id="app">
     <Header></Header>
     <div id="content">
-      <div class="content-wrapper">
-        <h1>GEO-TREES: high-accuracy ground data</h1>
-        <h2>for satellite-derived biomass mapping</h2>
-        <div class="homepage-intro">
-          <span>
-            Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest carbon from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data open access.
-          </span>
-        </div>
-        <div class="homepage-intro">
-          <span>The Terms of Reference of the GEO-TREES initiative are available <a href="https://geo-trees.org/terms-of-reference/" target="_blank">here</a>.</span>
-        </div>
-        <div class="homepage-intro">
-          <span>GEO-TREES implements the recommendations of the <a href="https://lpvs.gsfc.nasa.gov/AGB/AGB_home.html" target="_blank">CEOS Aboveground Biomass Land Product Validation protocol</a>.</span>
+      <div class="content-section">
+        <div class="content-wrapper">
+          <h1>GEO-TREES: high-accuracy ground data</h1>
+          <h2>for satellite-derived biomass mapping</h2>
+          <div class="homepage-intro">
+            <span>
+              Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest carbon from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data open access.
+            </span>
+          </div>
+          <div class="homepage-intro">
+            <span>The Terms of Reference of the GEO-TREES initiative are available <a href="https://geo-trees.org/terms-of-reference/" target="_blank">here</a>.</span>
+          </div>
+          <div class="homepage-intro">
+            <span>GEO-TREES implements the recommendations of the <a href="https://lpvs.gsfc.nasa.gov/AGB/AGB_home.html" target="_blank">CEOS Aboveground Biomass Land Product Validation protocol</a>.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -62,11 +64,12 @@ export default {
         margin-bottom: 5px;
       } 
       h2{
-        color: #fff;
+        color: #fff!important;
         background-color: #213043;
         display: inline-block;
         padding: 10px 20px;
         margin-bottom: 40px;
+        font-size: 45px;
       }
       .homepage-intro{
         display: inline-block;
