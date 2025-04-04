@@ -219,4 +219,40 @@ export default {
   }
 }
 
+@media (max-width: 767px) {
+
+  #app {
+    #content{
+      .content-section{
+        .content-wrapper{ 
+          .img-carroussel{
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: visible;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            .img-carroussel-item{
+              width: 80%;
+              height: auto;
+              aspect-ratio: 1;
+              max-width: 250px;
+              margin-right: 0px;
+              margin-bottom: 10px;
+              &:last-child{
+                margin-bottom: 0px;
+              }
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>
