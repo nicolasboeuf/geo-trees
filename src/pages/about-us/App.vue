@@ -215,7 +215,7 @@ export default {
           name:"Bonaventure Sonké",
           role:"",
           affiliation:"University of Yaounde I, Cameroon",
-          image:"Capture-décran-2022-10-27-à-12.50.23.png",
+          image:"Capture-decran-2022-10-27-a-12.50.23.png",
           group:"scientific-board"
         },
       ]
