@@ -1,6 +1,7 @@
 <template>
   <div id="header">
-    <div id="header-logo"><img src="icon.png" alt="GEO-TREES"/></div>
+    <div id="header-logo">
+      <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'"><img src="icon.png" alt="GEO-TREES"/></a></div>
     <div id="header-menu-button" :class="{'open': menuOpen}" @click="toggleMenu">
       <div class="menu-button-line"></div>
       <div class="menu-button-line"></div>

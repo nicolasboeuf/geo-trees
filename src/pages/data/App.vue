@@ -43,7 +43,7 @@
                 <span>TLS: 2023</span>
               </div>
               <div class="progress-link">
-                Read more
+                <a href="https://forestgeo.si.edu/sites/neotropics/barro-colorado-island" target="_blank">Read more</a>
               </div>
             </div>
 
@@ -73,7 +73,7 @@
                 <span>TLS: 2017</span>
               </div>
               <div class="progress-link">
-                See on map
+                <a href="https://forestplots.net/fr/carte" target="_blank">See on map</a>
               </div>
             </div>
 
@@ -103,7 +103,7 @@
                 <span>TLS: 2013, 2016, 2022</span>
               </div>
               <div class="progress-link">
-                See on map
+                <a href="https://forestplots.net/fr/carte" target="_blank">See on map</a>
               </div>
             </div>
 
@@ -133,7 +133,7 @@
                 <span>TLS: 2015</span>
               </div>
               <div class="progress-link">
-                Read more
+                <a href="https://www.leeisa.cnrs.fr/plateformes/station-scientifique-des-nouragues/" target="_blank">Read more</a>
               </div>
             </div>
 
@@ -163,7 +163,7 @@
                 <span>TLS: 2019, 2022</span>
               </div>
               <div class="progress-link">
-                Read more
+                <a href="https://paracou.cirad.fr/" target="_blank">Read more</a>
               </div>
             </div>
 
@@ -207,23 +207,6 @@ export default {
     .content-section{
       .content-wrapper{
         text-align: center;
-        .link-text{
-          font-family: "Lato-Bold";
-          font-size: 25px;
-          color:#213043;
-          display: inline-block;
-          background-color: #fff;
-          padding: 10px 15px;
-          margin:45px auto 25px;
-          text-align: center;
-          a{
-            color:#213043;
-            text-decoration: none;
-            &:hover{
-              text-decoration: underline;
-            }
-          }
-        }
         .progress-wrapper{
           display: flex;
           flex-wrap: wrap;
@@ -275,6 +258,13 @@ export default {
               font-size: 20px;
               color: #fff;
               background-color: #213043;
+              a{
+                color: #fff;
+                text-decoration: none;
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
             }
           }
         }

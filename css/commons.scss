@@ -69,6 +69,23 @@
             display: block;
           }
         }
+        .link-text{
+          font-family: "Lato-Bold";
+          font-size: 25px;
+          color:#213043;
+          display: inline-block;
+          background-color: #fff;
+          padding: 10px 15px;
+          margin:45px auto 25px;
+          text-align: center;
+          a{
+            color:#213043;
+            text-decoration: none;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
       }
       &.section-dark{
         background-color: #213043;
