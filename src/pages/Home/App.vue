@@ -55,56 +55,60 @@ export default {
     background-image: url("../../assets/homepage-background.jpg");
     background-size: cover;
     background-position: center;
-    .content-wrapper{
-      h1{
-        color: #fff;
-        background-color: #213043;
-        display: inline-block;
-        padding: 10px 20px;
-        margin-bottom: 5px;
-      } 
-      h2{
-        color: #fff!important;
-        background-color: #213043;
-        display: inline-block;
-        padding: 10px 20px;
-        margin-bottom: 40px;
-        font-size: 45px;
-      }
-      .homepage-intro{
-        display: inline-block;
-        margin-top: 10px;
-        text-align: left;
-        width: 100%;
-        span{
+    .content-section{
+      .content-wrapper{
+        text-align: center;
+        h1{
+          color: #fff;
+          background-color: #213043;
           display: inline-block;
-          text-align: left;
-          background-color: #ffffff;
-          font-size: 20px;
-          color: #213043;
-          font-family: "Lato-Regular";
           padding: 10px 20px;
-          line-height: 45px;
-          a{
-            color: #53A034;
-            text-decoration: none;
+          margin-bottom: 5px;
+        } 
+        h2{
+          color: #fff!important;
+          background-color: #213043;
+          display: inline-block;
+          padding: 10px 20px;
+          margin-bottom: 40px;
+          font-size: 45px;
+        }
+        .homepage-intro{
+          display: inline-block;
+          margin-top: 10px;
+          text-align: left;
+          width: 100%;
+          span{
+            display: inline-block;
+            text-align: left;
+            background-color: #ffffff;
+            font-size: 20px;
+            color: #213043;
+            font-family: "Lato-Regular";
+            padding: 10px 20px;
+            line-height: 45px;
+            a{
+              color: #53A034;
+              text-decoration: none;
+            }
           }
         }
       }
     }
   }
-  
 }
 
 @media (max-width: 767px) {
 
   #app {
     #content{
-      .content-wrapper{
-        .homepage-intro{
-          font-size: 18px;
-          span{
-            line-height: 32px;
+      .content-section{
+        .content-wrapper{
+          .homepage-intro{
+            font-size: 18px;
+            span{
+              line-height: 32px;
+            }
           }
         }
       }

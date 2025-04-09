@@ -162,12 +162,7 @@ export default {
 #app{
   #content{
     .content-section{
-      padding: 20px 0 50px 0;
       .content-wrapper{
-        h2{
-          margin-bottom: 25px;
-          text-align: left;
-        }
         .img-carroussel{
           width: 100%;
           aspect-ratio: 4;
@@ -187,31 +182,6 @@ export default {
               height: 100%;
               object-fit: cover;
             }
-          }
-        }
-      }
-      &.section-dark{
-        .content-wrapper{
-          h1{
-            color:#53A034;
-            margin-bottom: 50px;
-          }
-          h2{
-            color: #fff;
-          }
-        }
-      }
-      &.section-light{
-        .content-wrapper{
-          h2{
-            color: #213043;
-          }
-        }
-      }
-      &.section-white{
-        .content-wrapper{
-          h2{
-            color: #213043;
           }
         }
       }
