@@ -7,8 +7,6 @@
           <h1>ALL ABOUT GEO-TREES</h1>
           <h2>GEO-TREES is enabled by a consortium of established forest inventory networks, advanced concept teams and user groups.</h2>
           <span class="default-text">Many users will benefit from GEO-TREES. Naturally, these include the Earth Observation community, as well as ecological, forest and biodiversity researchers, and earth system modellers. As confidence increases in biomass maps, GEO-TREES will assist diverse groups including governments, policy-makers, communities and enterprises -everyone needing to know where forest carbon is and how it is changing.</span>
-          
-          
         </div>
       </div>
 
@@ -37,7 +35,7 @@
           <h2>Project Manager</h2>
           <div class="team-member-list">
             <div class="team-member" v-for="member in projectManager" :class="member.group" v-bind:key="member.name">
-              <div class="team-member-image">
+              <div class="team-member-image no-border">
                 <img :src="member.image"/>
               </div>
               <h3>{{member.name}}</h3>
@@ -50,7 +48,7 @@
           <div class="team-member-list">
             <div class="team-member" v-for="member in scientificBoard" :class="member.group" v-bind:key="member.name">
               <div class="team-member-image">
-                <img :class="(member.name=='Luiz Aragão'||member.name=='Bonaventure Sonké'?'zoom':'')" :src="member.image"/>
+                <img :class="(member.name=='Luiz Aragão'||member.name=='Bonaventure Sonké'||member.name=='Laura Duncanson'?'zoom':'')" :src="member.image"/>
               </div>
               <h3>{{member.name}}</h3>
               <span class="team-member-role">{{member.role}}</span>
@@ -58,6 +56,31 @@
             </div>
           </div>
 
+          <h2>Network Partners</h2>
+          <div class="partners-logo-list">
+            <div class="partner-logo"><a href="https://forestplots.net/" target="_blank"><img src="logo-forestplots.png"/></a></div>
+            <div class="partner-logo"><a href="https://forestgeo.si.edu/" target="_blank"><img src="logo-forestgeo.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://tmfo.org/" target="_blank"><img src="logo-tmfo.png"/></a></div>
+          </div>
+
+          <h2>Supporting Partners</h2>
+          <div class="partners-logo-list small-logo">
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="log-bezos-fund.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://www.asc-csa.gc.ca/eng/" target="_blank"><img src="CSA_circular_black_and_red.png"/></a></div>
+            <div class="partner-logo"><a href="https://cnes.fr/" target="_blank"><img src="Logo_CNES_2017_triangulaire_bleu-2.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.cnrs.fr" target="_blank"><img src="cnrs-image.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.dlr.de/en" target="_blank"><img src="DLR-logo.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://www.esa.int/" target="_blank"><img src="ESA_logo.svg_.png"/></a></div>
+            <div class="partner-logo"><a href="https://iiasa.ac.at/" target="_blank"><img src="IIASA-logo-square-150x150.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://www.earthdata.nasa.gov/data/instruments/gedi-lidar" target="_blank"><img src="nasa-logo-1280x1059-1.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.oneforestvision.org/" target="_blank"><img src="ofvi-3.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://www.tern.org.au/" target="_blank"><img src="TERN-NCRIS-Logo-Primary.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.leeds.ac.uk/" target="_blank"><img src="University-of-Leeds-logo.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://stri.si.edu/" target="_blank"><img src="si_STRI_rgb_horizontal_color.jpg"/></a></div>
+            <div class="partner-logo"><a href="https://www.nsf.gov/" target="_blank"><img src="NSF-logo-1.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.moore.org/" target="_blank"><img src="moore-logo-PRIMARY-1024x398.png"/></a></div>
+
+          </div>
 
         </div>
       </div>
@@ -270,6 +293,11 @@ export default {
             position: relative;
             overflow: hidden;
             margin: 0 auto;
+            border:3px solid #53A034;
+            box-sizing: border-box;
+            &.no-border{
+              border:none;
+            }
             img{
               width: 100%;
               height: auto;
@@ -295,9 +323,52 @@ export default {
             margin-bottom: 5px;
           }
         }
+        .partners-logo-list{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 50px 25px;
+          margin-top: 50px;
+          margin-bottom: 100px;
+          .partner-logo{
+            width: 30%;
+            height: 150px;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
+          }
+          &.small-logo{
+            .partner-logo{
+              width: 20%;
+              height: 125px;
+            }
+          }
+        }
       }
     }
   }
+}
+
+@media (max-width: 1023px) {
+
+  #app {
+    #content{
+      .content-section{
+        .content-wrapper{
+          .partners-logo-list{
+            &.small-logo{
+              .partner-logo{
+                width: 30%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -317,6 +388,16 @@ export default {
           }
           span{
             font-size: 16px;
+          }
+        }
+        .partners-logo-list{
+          .partner-logo{
+            width: 40%;
+          }
+          &.small-logo{
+            .partner-logo{
+              width: 40%;
+            }
           }
         }
       }

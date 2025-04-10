@@ -11,7 +11,7 @@
         </div>
       </div>
 
-      <div class="content-section section-green">
+      <div class="content-section section-light">
         <div class="content-wrapper">
           <h2>GEO-TREES Progress</h2>
           <span class="default-text">BRM sites conducted as part of the ESA ForestScan activity : Paracou – French Guiana, Lope – Gabon and Sepilok – Malaysia.</span>
