@@ -98,11 +98,13 @@
           <img class="center" src="illustration-terrestial-laser-scanning@2x.png"/>
           <span class="cartouche-text">ON THE GROUND</span>
           <div class="img-carroussel">
-            <div class="img-carroussel-item">
-              <img src="Screenshot-2024-03-11-at-10.53.jpg"/>
+            <div class="img-carroussel-item video-item">
+              <svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Subtract" opacity="0.9" fill-rule="evenodd" clip-rule="evenodd" d="M69 138C107.108 138 138 107.108 138 69C138 30.8924 107.108 0 69 0C30.8924 0 0 30.8924 0 69C0 107.108 30.8924 138 69 138ZM49.25 107.971L110 69L49.25 30.0289L49.25 107.971Z" fill="#C0D8A4"/></svg>
+              <a href="https://player.vimeo.com/video/945828370?rel=0" target="_blank"><img src="thumbnail-TLS_video1@2x.png"/></a>
             </div>
-            <div class="img-carroussel-item">
-              <img src="Screenshot-2024-03-11-at-10.53.jpg"/>
+            <div class="img-carroussel-item video-item">
+              <svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="Subtract" opacity="0.9" fill-rule="evenodd" clip-rule="evenodd" d="M69 138C107.108 138 138 107.108 138 69C138 30.8924 107.108 0 69 0C30.8924 0 0 30.8924 0 69C0 107.108 30.8924 138 69 138ZM49.25 107.971L110 69L49.25 30.0289L49.25 107.971Z" fill="#C0D8A4"/></svg>
+              <a href="https://www.youtube.com/watch?v=PPORer0aOVM&t=42s" target="_blank"><img src="thumbnail-TLS2@2x.png"/></a>
             </div>
           </div>
         </div>
@@ -174,6 +176,42 @@ export default {
             width: 24%;
             height: 100%;
             margin-right: 15px;
+            position: relative;
+            &.video-item{
+              cursor: pointer;
+              svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                pointer-events: none;
+              }
+              &:hover{
+                svg{
+                  opacity: 0;
+                }
+                &:before{
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                }
+                &:after{
+                  content: "Click to see the video";
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  color: #fff;
+                  font-size: 16px;
+                  font-family: "Lato-Bold";
+                  white-space: nowrap;
+                }
+              }
+            }
             &:last-child{
               margin-right: 0;
             }
