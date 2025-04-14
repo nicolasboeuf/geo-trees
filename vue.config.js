@@ -6,10 +6,10 @@ module.exports = {
       title: 'Homepage',
       filename: 'index.html'
     },
-    'about-us':{
-      entry: './src/pages/about-us/main.js',
-      title: 'About-us',
-      filename: 'about-us.html'
+    'our-team':{
+      entry: './src/pages/our-team/main.js',
+      title: 'Our-team',
+      filename: 'our-team.html'
     },
     'project':{
       entry: './src/pages/project/main.js',
@@ -21,15 +21,10 @@ module.exports = {
       title: 'Data',
       filename: 'data.html'
     },
-    'contact':{
-      entry: './src/pages/contact/main.js',
-      title: 'Contact',
-      filename: 'contact.html'
-    },
-    'terms-of-reference':{
-      entry: './src/pages/terms-of-reference/main.js',
-      title: 'Terms-of-reference',
-      filename: 'terms-of-reference.html'
+    'about-us':{
+      entry: './src/pages/about-us/main.js',
+      title: 'About-us',
+      filename: 'about-us.html'
     }
   },
   configureWebpack: {

@@ -9,11 +9,10 @@
     </div>
     <div id="header-links" :class="{'open': menuOpen}">
       <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
-      <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/about-us.html'">ABOUT US</a>
+      <a :class="pathName === 'about_us.html' ? 'active' : ''" :href="dynamicPath + '/our-team.html'">OUR TEAM</a>
       <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
       <a :class="pathName === 'data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">DATA</a>
-      <a :class="pathName === 'contact.html' ? 'active' : ''" :href="dynamicPath + '/contact.html'">CONTACT</a>
-      <a :class="pathName === 'terms-of-reference.html' ? 'active' : ''" :href="dynamicPath + '/terms-of-reference.html'">Terms of Reference</a>
+      <a :class="pathName === 'about-us.html' ? 'active' : ''" :href="dynamicPath + '/about-us.html'">ABOUT US</a>
     </div>
   </div>
 </template>

@@ -123,11 +123,8 @@
         <div class="content-wrapper">
           <h2>How is implementation carried out?</h2>
           <span class="default-text">At least 100 core BRM sites will consist of long-term intensive measurements of forest biomass. An additional 200 supplementary BRM sites will involve less intensive biomass sampling, ensuring full representation of the main environmental and anthropogenic dimensions over which forests occur globally.</span><br/>
-          <span class="default-text"><b>The map below provides a dynamic illustration of completed, ongoing, and planned BRM sites.</b><br/>We welcome suggestions and insights from the community on high-priority areas for GEO-TREES sampling</span>
         </div>
       </div>
-
-      <iframe src="https://geo-trees.org/carto/" width="100%" height="600px"></iframe>
 
     </div>
   </div>

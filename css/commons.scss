@@ -38,6 +38,9 @@
           line-height: 35px;
           color: #213043;
           display: block;
+          a{
+            color: #213043;
+          }
           &.default-text-italic{
             font-style: italic;
           }
@@ -91,6 +94,12 @@
         background-color: #213043;
         .default-text{
           color: #fff;
+          a{
+            color: #fff;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
         }
         h1{
           color:#53A034;
