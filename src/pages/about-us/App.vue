@@ -68,6 +68,7 @@ export default {
 
 #app {
   #content{
+    background-color: #f4f7e4;
     .content-section{
       .content-wrapper{
         .link-container{

@@ -1,5 +1,5 @@
 <template>
-  <div id="header">
+  <div id="header" :class="{'small': isScrolled}">
     <div id="header-logo">
       <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'"><img src="icon.png" alt="GEO-TREES"/></a></div>
     <div id="header-menu-button" :class="{'open': menuOpen}" @click="toggleMenu">
@@ -24,7 +24,8 @@ export default {
   name: 'Header',
   data(){
     return {
-      menuOpen: false
+      menuOpen: false,
+      isScrolled: false
     }
   },
   props: {
@@ -35,11 +36,15 @@ export default {
     },
     pathName(){
       return window.location.href.split('/').pop()
-    }
+    },
+    
   },
   methods: {
     toggleMenu(){
       this.menuOpen = !this.menuOpen
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 250
     }
   },
 
@@ -47,7 +52,10 @@ export default {
   },
 
   created(){
-
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
 }
@@ -59,7 +67,12 @@ export default {
 #header{
   background-color: #fff;
   height: 80px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: height 0.3s ease-in-out;
   #header-logo{
     width: auto;
     height: 100%;
@@ -84,6 +97,7 @@ export default {
       text-decoration: none;
       color:#213043;
       position: relative;
+      transition: font-size 0.3s ease-in-out;
       &:after{
         content: '';
         display: block;
@@ -124,6 +138,17 @@ export default {
   }
   #header-menu-button{
     display: none;
+  }
+  &.small{
+    height: 50px;
+    #header-logo{
+      display: none;
+    }
+    #header-links{
+      a{
+        font-size: 17px;  
+      }
+    }
   }
 }
 
@@ -224,6 +249,13 @@ export default {
             transform: rotate(-45deg) translate(5px, -5px);
           }
         }
+      }
+    }
+    &.small{
+    height: 80px;
+      #header-logo{
+        display: block;
+        
       }
     }
   }
