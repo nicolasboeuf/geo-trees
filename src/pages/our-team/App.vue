@@ -78,7 +78,17 @@
             <div class="partner-logo"><a href="https://stri.si.edu/" target="_blank"><img src="si_STRI_rgb_horizontal_color.jpg"/></a></div>
             <div class="partner-logo"><a href="https://www.nsf.gov/" target="_blank"><img src="NSF-logo-1.png"/></a></div>
             <div class="partner-logo"><a href="https://www.moore.org/" target="_blank"><img src="moore-logo-PRIMARY-1024x398.png"/></a></div>
+          </div>
 
+          <h2>Site Partners</h2>
+          <div class="partners-logo-list x-small-logo">
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo-cirad.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="Universidade-do-Estado-de-Mato-Grosso-UNEMAT-300x300.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo-CONICET_opt.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="iiap_logo.jpeg"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo_-_panama_canal_authority.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="Logo-Parques-Principal-1.png"/></a></div>
+            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo_fundacao_florestal.png"/></a></div>
           </div>
 
         </div>
@@ -344,6 +354,12 @@ export default {
               height: 125px;
             }
           }
+          &.x-small-logo{
+            .partner-logo{
+              width: 15%;
+              height: 100px;
+            }
+          }
         }
       }
     }
@@ -360,6 +376,11 @@ export default {
             &.small-logo{
               .partner-logo{
                 width: 30%;
+              }
+            }
+            &.x-small-logo{
+              .partner-logo{
+                width: 15%;
               }
             }
           }
@@ -394,6 +415,11 @@ export default {
             width: 40%;
           }
           &.small-logo{
+            .partner-logo{
+              width: 40%;
+            }
+          }
+          &.x-small-logo{
             .partner-logo{
               width: 40%;
             }

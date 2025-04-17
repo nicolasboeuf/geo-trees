@@ -2,10 +2,15 @@
   <div id="app">
     <Header></Header>
     <div id="content">
-      <div class="content-section">
+      <div class="content-section homepage-banner">
         <div class="content-wrapper">
           <h1>GEO-TREES: high-accuracy ground data</h1>
           <h2>for satellite-derived biomass mapping</h2>
+        </div>
+        <div class="homepage-banner-overlay"></div>
+      </div>
+      <div class="content-section">
+        <div class="content-wrapper">
           <div class="homepage-intro">
             <span>
               Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest carbon from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data open access.
@@ -52,26 +57,41 @@ export default {
 
 #app {
   #content{
-    background-image: url("../../assets/homepage-background.jpg");
-    background-size: cover;
-    background-position: center;
+    background-color: #f4f7e4;
     .content-section{
+      position: relative;
+      &.homepage-banner{
+        background-image: url("../../assets/homepage-background.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .homepage-banner-overlay{
+        background-color: #000000;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
       .content-wrapper{
+        position: relative;
+        z-index: 1;
         text-align: center;
         h1{
           color: #fff;
-          background-color: #213043;
-          display: inline-block;
-          padding: 10px 20px;
-          margin-bottom: 5px;
+          display: block;
+          margin-top: 20px;
+          text-align: center;
         } 
         h2{
           color: #fff!important;
-          background-color: #213043;
-          display: inline-block;
-          padding: 10px 20px;
-          margin-bottom: 40px;
+          display: block;
+          margin-bottom: 10px;
           font-size: 45px;
+          text-align: center;
         }
         .homepage-intro{
           display: inline-block;
@@ -81,7 +101,6 @@ export default {
           span{
             display: inline-block;
             text-align: left;
-            background-color: #ffffff;
             font-size: 20px;
             color: #213043;
             font-family: "Lato-Regular";
@@ -98,12 +117,36 @@ export default {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
 
   #app {
     #content{
       .content-section{
         .content-wrapper{
+          h2{
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+
+  #app {
+    #content{
+      .content-section{
+        &.homepage-banner{
+          padding: 20px 0 20px 0;
+        }
+        .content-wrapper{
+          h1{
+            margin-bottom: 10px;
+          }
+          h2{
+            margin-bottom: 0px;
+          }
           .homepage-intro{
             font-size: 18px;
             span{
@@ -114,7 +157,6 @@ export default {
       }
     }
   }
-
 }
 
 </style>
