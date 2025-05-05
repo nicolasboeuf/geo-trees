@@ -4,7 +4,7 @@
     <div id="content">
       <div class="content-section section-dark">
         <div class="content-wrapper">
-          <h1>GEO-TREES: a network of Biomass Reference Measurement sites</h1>
+          <h1>A network of Biomass Reference Measurement sites</h1>
           <h2>What are Biomass Reference Measurement (BRM) sites ?</h2>
           <span class="default-text">The Forest Biomass Reference System will represent forests around the world, with strong priority placed on the tropics. GEO-TREES will be established through collaboration with existing international networks of high-quality forest plots that use standard forest monitoring protocols. Biomass Reference Measurement sites (BRM) are in situ forest measurement sites. They will have:
             <ul>
@@ -110,22 +110,12 @@
         </div>
       </div>
 
-      <div class="content-section section-dark">
-        <div class="content-wrapper">
-          <h2>Data Sharing</h2>
-          <span class="default-text">The biomass data collected by the GEO-TREES project will be made publicly accessible through the GEO-TREES web portal.</span><br/>
-          <span class="default-text">To deliver these high-quality data over a sustained period in dozens of countries requires skilled teams hosted by institutional partners. The labor and skill demanded for the groundwork are high, and conditions of work are often insecure and difficult. It follows that for in situ data to be shared openly GEO-TREES partners will be fairly and systematically funded with adequate provision of training and career development.</span><br/>
-          <span class="default-text">The intellectual property of the primary stem and species data remain with the principal investigators of each site.</span>
-        </div>
-      </div>
-
       <div class="content-section section-green">
         <div class="content-wrapper">
           <h2>How is implementation carried out?</h2>
           <span class="default-text">At least 100 core BRM sites will consist of long-term intensive measurements of forest biomass. An additional 200 supplementary BRM sites will involve less intensive biomass sampling, ensuring full representation of the main environmental and anthropogenic dimensions over which forests occur globally.</span><br/>
         </div>
       </div>
-
     </div>
   </div>
 </template>

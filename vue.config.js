@@ -6,25 +6,30 @@ module.exports = {
       title: 'Homepage',
       filename: 'index.html'
     },
-    'our-team':{
-      entry: './src/pages/our-team/main.js',
-      title: 'Our-team',
-      filename: 'our-team.html'
+    'about-us':{
+      entry: './src/pages/about-us/main.js',
+      title: 'About-us',
+      filename: 'about-us.html'
     },
     'project':{
       entry: './src/pages/project/main.js',
       title: 'Project',
       filename: 'project.html'
     },
+    'sites':{
+      entry: './src/pages/sites/main.js',
+      title: 'Sites',
+      filename: 'sites.html'
+    },
     'data':{
       entry: './src/pages/data/main.js',
       title: 'Data',
       filename: 'data.html'
     },
-    'about-us':{
-      entry: './src/pages/about-us/main.js',
-      title: 'About-us',
-      filename: 'about-us.html'
+    'contact':{
+      entry: './src/pages/contact/main.js',
+      title: 'Contact',
+      filename: 'contact.html'
     }
   },
   configureWebpack: {
