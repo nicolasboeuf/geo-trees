@@ -17,7 +17,7 @@
         </div>
       </div>
 
-      <div class="content-section section-white">
+      <div class="content-section section-white" v-if="aboutData">
         <div class="content-wrapper">
 
           <h2>Executive Board</h2>
@@ -58,38 +58,17 @@
 
           <h2>Network Partners</h2>
           <div class="partners-logo-list">
-            <div class="partner-logo"><a href="https://forestplots.net/" target="_blank"><img src="logo-forestplots.png"/></a></div>
-            <div class="partner-logo"><a href="https://forestgeo.si.edu/" target="_blank"><img src="logo-forestgeo.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://tmfo.org/" target="_blank"><img src="logo-tmfo.png"/></a></div>
+            <a class="partner-logo" v-for="member in networksPartners" v-bind:key="member.name" :href="member.link" target="_blank"><img :src="member.image"/></a>
           </div>
 
           <h2>Site Partners</h2>
           <div class="partners-logo-list x-small-logo">
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo-cirad.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="Universidade-do-Estado-de-Mato-Grosso-UNEMAT-300x300.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo-CONICET_opt.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="iiap_logo.jpeg"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo_-_panama_canal_authority.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="Logo-Parques-Principal-1.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="logo_fundacao_florestal.png"/></a></div>
+            <a class="partner-logo" v-for="member in sitePartners" v-bind:key="member.name" :href="member.link" target="_blank"><img :src="member.image"/></a>
           </div>
 
           <h2>Supporting Partners</h2>
           <div class="partners-logo-list small-logo">
-            <div class="partner-logo"><a href="https://www.bezosearthfund.org/" target="_blank"><img src="log-bezos-fund.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://www.asc-csa.gc.ca/eng/" target="_blank"><img src="CSA_circular_black_and_red.png"/></a></div>
-            <div class="partner-logo"><a href="https://cnes.fr/" target="_blank"><img src="Logo_CNES_2017_triangulaire_bleu-2.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.cnrs.fr" target="_blank"><img src="cnrs-image.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.dlr.de/en" target="_blank"><img src="DLR-logo.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://www.esa.int/" target="_blank"><img src="ESA_logo.svg_.png"/></a></div>
-            <div class="partner-logo"><a href="https://iiasa.ac.at/" target="_blank"><img src="IIASA-logo-square-150x150.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://www.earthdata.nasa.gov/data/instruments/gedi-lidar" target="_blank"><img src="nasa-logo-1280x1059-1.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.oneforestvision.org/" target="_blank"><img src="ofvi-3.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://www.tern.org.au/" target="_blank"><img src="TERN-NCRIS-Logo-Primary.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.leeds.ac.uk/" target="_blank"><img src="University-of-Leeds-logo.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://stri.si.edu/" target="_blank"><img src="si_STRI_rgb_horizontal_color.jpg"/></a></div>
-            <div class="partner-logo"><a href="https://www.nsf.gov/" target="_blank"><img src="NSF-logo-1.png"/></a></div>
-            <div class="partner-logo"><a href="https://www.moore.org/" target="_blank"><img src="moore-logo-PRIMARY-1024x398.png"/></a></div>
+            <a class="partner-logo" v-for="member in supportingPartners" v-bind:key="member.name" :href="member.link" target="_blank"><img :src="member.image"/></a>
           </div>
 
         </div>
@@ -102,6 +81,8 @@
 <script>
 
 import Header from '@/components/header.vue'
+import { getData } from '../../import.js'
+import store from '@/store'
 
 export default {
   name: 'About-us',
@@ -109,160 +90,29 @@ export default {
     Header
   },
   data(){
-    return {
-      team:[
-        {
-          name:"Jérôme Chave",
-          role:"Direction",
-          affiliation:"CNRS, France",
-          image:"Photo_JeromeChave.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Klaus Scipal",
-          role:"Direction",
-          affiliation:"European Space Agency, Italy",
-          image:"Photo_Klaus.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Stuart Davies",
-          role:"Network representative",
-          affiliation:"Smithsonian Institution, USA",
-          image:"StuartDavies_Photo.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Alvaro Duque",
-          role:"Site representative",
-          affiliation:"National University of Colombia, Colombia",
-          image:"Alvaro_2024-e1716278662757.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Beatriz Schwantes Marimon",
-          role:"Site representative",
-          affiliation:"Universidade do Estado de Mato Grosso, Brazil",
-          image:"Photo_Beatriz_S_M.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Oliver Phillips",
-          role:"Network representative",
-          affiliation:"University of Leeds, UK",
-          image:"Photo_Oliver_Phillips-scaled.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Camille Piponiot",
-          role:"Network representative",
-          affiliation:"CIRAD, France",
-          image:"Photo_Camille-scaled.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Lillian Rodriguez",
-          role:"Site representative",
-          affiliation:"University of the Philippines, the Philippines",
-          image:"Rodriguez_cropped.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"Irié Zo-Bi",
-          role:"Site representative",
-          affiliation:"INPHB, Côte d'Ivoire",
-          image:"Irie_ZoBi.jpg",
-          group:"executive-board"
-        },
-        {
-          name:"CNRS, France",
-          role:"",
-          affiliation:"",
-          image:"cnrs-image.png",
-          group:"project-manager"
-        },
-        {
-          name:"Luiz Aragão",
-          role:"",
-          affiliation:"INPE, Brazil",
-          image:"Foto_Luiz_Aragao_2-300x253-1.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Mathias Disney",
-          role:"",
-          affiliation:"University College London, UK",
-          image:"MatDisney_photo.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Laura Duncanson",
-          role:"",
-          affiliation:"University of Maryland, USA",
-          image:"Laura_D_photo-e1678213041213.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Martin Herold",
-          role:"",
-          affiliation:"GFZ Potsdam, Germany",
-          image:"martin_herold_photo-1.jpeg",
-          group:"scientific-board"
-        },
-        {
-          name:"Euridice Honorio Coronado",
-          role:"",
-          affiliation:"University of St Andrews, UK",
-          image:"Euridice-Honorio-Coronado_photo.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Tommaso Jucker",
-          role:"",
-          affiliation:"University of Bristol, UK",
-          image:"Tommaso-Jucker_square.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Helene Muller-Landau",
-          role:"",
-          affiliation:"Smithsonian Institution, USA",
-          image:"Photo_HeleneMuller.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Sassan Saatchi",
-          role:"",
-          affiliation:"NASA, Jet Propulsion Laboratory, USA",
-          image:"sassan_photo_BW.png",
-          group:"scientific-board"
-        },
-        {
-          name:"Dmitry Schepaschenko",
-          role:"",
-          affiliation:"IIASA, Austria",
-          image:"Dmitry_S_IIASA_photo.jpg",
-          group:"scientific-board"
-        },
-        {
-          name:"Bonaventure Sonké",
-          role:"",
-          affiliation:"University of Yaounde I, Cameroon",
-          image:"Capture-decran-2022-10-27-a-12.50.23.png",
-          group:"scientific-board"
-        },
-      ]
-    }
+    return {}
   },
   computed: {
     executiveBoard(){
-      return this.team.filter(member => member.group === "executive-board");
+      return this.aboutData.filter(member => member.group === "executive-board");
     },
     projectManager(){
-      return this.team.filter(member => member.group === "project-manager");
+      return this.aboutData.filter(member => member.group === "project-manager");
     },
     scientificBoard(){
-      return this.team.filter(member => member.group === "scientific-board");
+      return this.aboutData.filter(member => member.group === "scientific-board");
+    },
+    networksPartners(){
+      return this.aboutData.filter(member => member.group === "networks-partners");
+    },
+    sitePartners(){
+      return this.aboutData.filter(member => member.group === "site-partners");
+    },
+    supportingPartners(){
+      return this.aboutData.filter(member => member.group === "supporting-partners");
+    },
+    aboutData(){
+      return store.state.aboutData
     }
   },
 
@@ -271,7 +121,7 @@ export default {
   },
   
   created(){
-  
+    getData(store)
   }
 }
 </script>

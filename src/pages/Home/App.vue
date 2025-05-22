@@ -31,7 +31,6 @@
 <script>
 
 import Header from '@/components/header.vue'
-/* import store from '@/store' */
 
 export default {
   name: 'Homepage',
@@ -46,6 +45,7 @@ export default {
   },
   
   created(){
+    
   }
 }
 </script>
