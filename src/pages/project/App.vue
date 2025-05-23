@@ -6,7 +6,7 @@
         <div class="content-wrapper">
           <h1>A network of Biomass Reference Measurement sites</h1>
           <h2>What are Biomass Reference Measurement (BRM) sites ?</h2>
-          <span class="default-text">The Forest Biomass Reference System will represent forests around the world, with strong priority placed on the tropics. GEO-TREES will be established through collaboration with existing international networks of high-quality forest plots that use standard forest monitoring protocols. Biomass Reference Measurement sites (BRM) are in situ forest measurement sites. They will have:
+          <span class="default-text">The Forest Biomass Reference System  represents forests around the world, with strong priority placed on the tropics. GEO-TREES is established through collaboration with existing international networks of high-quality forest plots that use standard forest monitoring protocols. Biomass Reference Measurement sites (BRM) are in situ forest measurement sites. They have:
             <ul>
               <li>a common standard for high-quality data acquisition</li>
               <li>transparent measurement protocols</li>
@@ -35,7 +35,7 @@
           <span class="default-text">
             Forest inventory on at least 10 ha of forests, with plots of at least 1 ha each.<br/>
             In the inventory, each tree is mapped, its diameter measured and species identified by botanists, using voucher collections where necessary.<br/>
-            Plots should be accurately geolocated.<br/>
+            Plots are accurately geolocated.<br/>
             Plots are regularly remeasured to track growth, recruitment and mortality.</span>
         </div>
       </div>
@@ -47,15 +47,19 @@
           <div class="img-carroussel">
             <div class="img-carroussel-item">
               <img src="15_Measuring_Amazon_trees_Peru_byRoelBrienen.jpg"/>
+              <span class="img-carroussel-text">Roel Brienen, Amazon rainforest, Peru</span>
             </div>
             <div class="img-carroussel-item">
               <img src="Andean_cloud_forest_collecting_JakeBryant.jpg"/>
+              <span class="img-carroussel-text">Jake Bryant, Andean cloud forest, Peru</span>
             </div>
             <div class="img-carroussel-item">
               <img src="Colombia_measuring_giant_Ceiba_in_the_Choco_rainforest_2_PaulineKindler.jpg"/>
+              <span class="img-carroussel-text">Pauline Kindler, Chocó rainforest, Colombia</span>
             </div>
             <div class="img-carroussel-item">
               <img src="Inventaire_sol.jpg"/>
+              <span class="img-carroussel-text">Iris-Amata Dion,  Paracou Forest French Guina</span>
             </div>
           </div>
         </div>
@@ -113,7 +117,7 @@
       <div class="content-section section-green">
         <div class="content-wrapper">
           <h2>How is implementation carried out?</h2>
-          <span class="default-text">At least 100 core BRM sites will consist of long-term intensive measurements of forest biomass. An additional 200 supplementary BRM sites will involve less intensive biomass sampling, ensuring full representation of the main environmental and anthropogenic dimensions over which forests occur globally.</span><br/>
+          <span class="default-text">At least 100 core BRM sites consists of long-term intensive measurements of forest biomass. An additional 200 supplementary BRM sites involve less intensive biomass sampling, ensuring full representation of the main environmental and anthropogenic dimensions over which forests occur globally.</span><br/>
         </div>
       </div>
     </div>
@@ -164,6 +168,26 @@ export default {
             height: 100%;
             margin-right: 15px;
             position: relative;
+            .img-carroussel-text{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(999,999, 999, 0.75);
+              color: #000;
+              font-size: 16px;
+              font-family: "Lato-Light";
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+              display: none;
+            }
+            &:hover{
+              .img-carroussel-text{
+                display: flex;
+              }
+            }
             &.video-item{
               cursor: pointer;
               svg{

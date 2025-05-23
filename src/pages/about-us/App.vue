@@ -6,7 +6,7 @@
         <div class="content-wrapper">
           <h1>About us</h1>
           <h2>GEO-TREES is enabled by a consortium of established forest inventory networks, advanced concept teams and user groups.</h2>
-          <span class="default-text">Many users will benefit from GEO-TREES. Naturally, these include the Earth Observation community, as well as ecological, forest and biodiversity researchers, and earth system modellers. As confidence increases in biomass maps, GEO-TREES will assist diverse groups including governments, policy-makers, communities and enterprises -everyone needing to know where forest carbon is and how it is changing.</span>
+          <span class="default-text">Many users will benefit from GEO-TREES. These include the Earth Observation community, ecological, forest and biodiversity researchers, and earth system modellers. As confidence in biomass maps increases, GEO-TREES will assist diverse groups including governments, policy-makers, communities and enterprises -everyone needing to know where forest carbon is and how it is changing.</span>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
             </div>
           </div>
 
-          <h2>Project Manager</h2>
+          <h2>Project Managers</h2>
           <div class="team-member-list">
             <div class="team-member" v-for="member in projectManager" :class="member.group" v-bind:key="member.name">
               <div class="team-member-image no-border">
@@ -62,6 +62,7 @@
           </div>
 
           <h2>Site Partners</h2>
+          <a href="https://geo-trees.org/sites/">More information about the sites</a>
           <div class="partners-logo-list x-small-logo">
             <a class="partner-logo" v-for="member in sitePartners" v-bind:key="member.name" :href="member.link" target="_blank"><img :src="member.image"/></a>
           </div>
@@ -140,6 +141,13 @@ export default {
           max-width: 800px;
           margin: 0 auto;
         }
+        a{ 
+          text-decoration: none;
+          font-family: "Lato-Regular";
+          font-size: 18px;
+          color: #213043;
+          text-decoration: underline;
+        }
         .team-member-list{
           width: 100%;
           display: flex;
@@ -206,13 +214,13 @@ export default {
           }
           &.small-logo{
             .partner-logo{
-              width: 20%;
+              width: 12%;
               height: 125px;
             }
           }
           &.x-small-logo{
             .partner-logo{
-              width: 15%;
+              width: 12%;
               height: 100px;
             }
           }
@@ -231,7 +239,7 @@ export default {
           .partners-logo-list{
             &.small-logo{
               .partner-logo{
-                width: 30%;
+                width: 15%;
               }
             }
             &.x-small-logo{
@@ -268,16 +276,16 @@ export default {
         }
         .partners-logo-list{
           .partner-logo{
-            width: 40%;
+            width: 28%;
           }
           &.small-logo{
             .partner-logo{
-              width: 40%;
+              width: 28%;
             }
           }
           &.x-small-logo{
             .partner-logo{
-              width: 40%;
+              width: 28%;
             }
           }
         }

@@ -6,7 +6,6 @@
       <div class="content-section section-dark">
         <div class="content-wrapper">
           <h1>Contact</h1>
-          <h2>Get in touch</h2>
           <span class="default-text">If you are a potential partner and would like to get in touch with us, please fill <a href="https://workspace.google.com/intl/fr/products/forms/">this form.</a></span>
           <span class="default-text">For any other request, you can contact us <a href="mailto:contact@geo-trees.org">by email</a>.</span>
         </div>

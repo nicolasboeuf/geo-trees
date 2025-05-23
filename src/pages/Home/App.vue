@@ -13,7 +13,7 @@
         <div class="content-wrapper">
           <div class="homepage-intro">
             <span>
-              Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest carbon from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data open access.
+              Land vegetation is a large carbon store and represents opportunities to sequester additional carbon. While many Earth Observation missions aim to estimate forest biomass from space, their calibration and validation is critical. Ultimately trust in biomass maps requires accurate ground data. Supporting ground measurements and the people who make them is thus mission-critical for mapping and tracking Earth’s forest carbon. Building on decades of work from the global research community with a strong representation of partners from the Global South, the GEO-TREES initiative aims to fund high quality ground data from a global network of long-term forest inventories, and to make these data openly accessible.
             </span>
           </div>
           <div class="homepage-intro">
@@ -90,12 +90,12 @@ export default {
           color: #fff!important;
           display: block;
           margin-bottom: 10px;
-          font-size: 45px;
+          font-size: 56px;
           text-align: center;
         }
         .homepage-intro{
           display: inline-block;
-          margin-top: 10px;
+          margin-top: 0;
           text-align: left;
           width: 100%;
           span{
@@ -105,7 +105,7 @@ export default {
             color: #213043;
             font-family: "Lato-Regular";
             padding: 10px 20px;
-            line-height: 45px;
+            line-height: 35px;
             a{
               color: #53A034;
               text-decoration: none;
@@ -124,7 +124,7 @@ export default {
       .content-section{
         .content-wrapper{
           h2{
-            font-size: 30px;
+            font-size: 35px;
           }
         }
       }

@@ -4,8 +4,7 @@
     <div id="content">
       <div class="content-section section-dark">
         <div class="content-wrapper">
-          <h1>Our sites</h1>
-          <h2>BRM sites map</h2>
+          <h1>Biomass Reference Measurement Sites</h1>
           <span class="default-text">The map below provides a dynamic illustration of completed, ongoing, and planned BRM sites.<br/>We welcome suggestions and insights from the community on high-priority areas for GEO-TREES sampling</span>
         </div>
         <iframe src="https://geo-trees.org/carto/" width="100%" height="600px"></iframe>

@@ -10,9 +10,9 @@
     <div id="header-links" :class="{'open': menuOpen}">
       <a :class="pathName === '' ? 'active' : ''" :href="dynamicPath + '/'">HOME</a>
       <a :class="pathName === 'about-us.html' ? 'active' : ''" :href="dynamicPath + '/about-us.html'">ABOUT US</a>
-      <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">OUR PROJECT</a>
-      <a :class="pathName === 'sites.html' ? 'active' : ''" :href="dynamicPath + '/sites.html'">OUR SITES</a>
-      <a :class="pathName === 'data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">OUR DATA</a>
+      <a :class="pathName === 'project.html' ? 'active' : ''" :href="dynamicPath + '/project.html'">PROJECT</a>
+      <a :class="pathName === 'sites.html' ? 'active' : ''" :href="dynamicPath + '/sites.html'">SITES</a>
+      <a :class="pathName === 'data.html' ? 'active' : ''" :href="dynamicPath + '/data.html'">DATA</a>
       <a :class="pathName === 'contact.html' ? 'active' : ''" :href="dynamicPath + '/contact.html'">CONTACT</a>
     </div>
   </div>
